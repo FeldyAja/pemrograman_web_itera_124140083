@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Latihan Loop & Fungsi</title>
+    <link rel="stylesheet" href="style_latihan.css">
+</head>
+<body>
+    <h2>Latihan 2: Loop & Fungsi</h2>
+    
+    <div class="section">
+        <h3>1. Tabel Perkalian</h3>
+        <input type="number" id="inputPerkalian" placeholder="Masukkan angka...">
+        <button onclick="cetakPerkalian()">Cetak Tabel</button>
+        <div id="hasilPerkalian" style="margin-top: 10px; font-family: monospace;"></div>
+    </div>
+
+    <div class="section">
+        <h3>2. Hitung Faktorial</h3>
+        <input type="number" id="inputFaktorial" placeholder="Masukkan angka...">
+        <button onclick="hitungFaktorial()">Hitung</button>
+        <p id="hasilFaktorial" style="font-weight: bold;"></p>
+    </div>
+
+    <div class="section">
+        <h3>3. Cek Bilangan Prima</h3>
+        <input type="number" id="inputPrima" placeholder="Masukkan angka...">
+        <button onclick="cekPrima()">Cek Prima</button>
+        <p id="hasilPrima" style="font-weight: bold;"></p>
+    </div>
+
+    <div class="section">
+        <h3>4. Kalkulator BMI</h3>
+        <input type="number" id="berat" placeholder="Berat badan (kg)">
+        <input type="number" id="tinggi" placeholder="Tinggi badan (cm)">
+        <button onclick="hitungBMI()">Hitung BMI</button>
+        <p id="hasilBMI" style="font-weight: bold;"></p>
+    </div>
+
+    <div class="section">
+        <h3>5. Program FizzBuzz (1-100)</h3>
+        <button onclick="jalankanFizzBuzz()">Jalankan FizzBuzz</button>
+        <!-- Kotak hasil dibuat scrollable agar tidak memakan terlalu banyak tempat ke bawah -->
+        <div id="hasilFizzBuzz" style="margin-top: 10px; max-height: 150px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; background-color: #f9f9f9;"></div>
+    </div>
+
+    <script src="2_loop_fungsi.js"></script>
+</body>
+</html>
