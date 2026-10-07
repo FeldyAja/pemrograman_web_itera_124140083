@@ -1,0 +1,58 @@
+:root {
+  --bg: #f3f6f8; --text: #1c2430; --muted: #64707d; --border: #dde3ea;
+  --accent: #0f766e; --danger: #c62828; --ok: #15803d;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.5 "Segoe UI", system-ui, sans-serif; font-variant-numeric: tabular-nums;
+}
+
+/* Tata letak */
+.topbar { background: var(--accent); color: #fff; padding: 20px 24px; }
+.topbar h1 { margin: 0; font-size: 1.5rem; }
+.topbar p { margin: 2px 0 0; font-size: .95rem; opacity: .85; }
+.layout {
+  max-width: 1100px; margin: 24px auto; padding: 0 16px;
+  display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 20px; align-items: start;
+}
+.summary { grid-column: 1 / -1; }
+.card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 20px; }
+.card h2 { margin: 0 0 16px; font-size: 1.1rem; }
+
+/* Form */
+.field { margin-bottom: 14px; }
+label { display: block; margin-bottom: 4px; font-size: .9rem; font-weight: 600; }
+input { width: 100%; padding: 9px 10px; border: 1px solid var(--border); border-radius: 6px; font: inherit; }
+input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+input.invalid { border-color: var(--danger); }
+.error { display: block; min-height: 1.1em; margin-top: 4px; color: var(--danger); font-size: .82rem; }
+
+/* Tombol */
+.btn { padding: 10px 16px; border: 1px solid transparent; border-radius: 6px; font: inherit; font-weight: 600; cursor: pointer; }
+.btn:hover { filter: brightness(.93); }
+.btn-primary { width: 100%; background: var(--accent); color: #fff; }
+.btn-outline { background: #fff; color: var(--accent); border-color: var(--accent); }
+.btn-hapus { padding: 4px 10px; background: #fff; color: var(--danger); border-color: var(--danger); font-size: .85rem; }
+
+/* Tabel */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+th, td { padding: 10px 8px; border-bottom: 1px solid var(--border); text-align: left; }
+th { background: #f8fafb; font-size: .85rem; color: var(--muted); }
+.num { text-align: right; }
+.kosong { padding: 24px; text-align: center; color: var(--muted); }
+
+/* Ringkasan & pembayaran */
+dl { margin: 0 0 16px; }
+dl div { display: flex; justify-content: space-between; padding: 6px 0; }
+dt { color: var(--muted); }
+dd { margin: 0; font-weight: 600; }
+.grand { margin-top: 6px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 1.15rem; font-weight: 600; }
+.grand dt { color: var(--text); }
+.grand dd { color: var(--accent); }
+.kembalian { min-height: 1.5em; margin: 0 0 16px; font-weight: 600; }
+.ok { color: var(--ok); }
+.kurang { color: var(--danger); }
+
+@media (max-width: 800px) { .layout { grid-template-columns: minmax(0, 1fr); } }
