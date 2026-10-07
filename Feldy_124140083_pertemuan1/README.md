@@ -54,15 +54,15 @@ Aplikasi ini tidak membutuhkan server khusus, sehingga file `index.html` juga bi
 
 **1. Tampilan form input utama**
 
-![Tampilan form input utama](Feldy_124140083_pertemuan1/img/form-input.png)
+![Tampilan form input utama](img/form-input.png)
 
 **2. Tampilan saat validasi error muncul**
 
-![Tampilan validasi error](Feldy_124140083_pertemuan1/img/validasi-error.png)
+![Tampilan validasi error](img/validasi-error.png)
 
 **3. Tampilan hasil perhitungan dan tabel keranjang**
 
-![Tampilan hasil perhitungan](Feldy_124140083_pertemuan1/img/hasil-bayar.png)
+![Tampilan hasil perhitungan](img/hasil-bayar.png)
 
 ## Penjelasan Teknis Singkat
 
