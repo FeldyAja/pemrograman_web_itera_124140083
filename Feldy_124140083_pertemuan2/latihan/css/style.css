@@ -1,0 +1,93 @@
+/* Style tambahan di luar Tailwind */
+
+/* Kartu output pakai <pre> (whitespace-pre-wrap), jadi spasi dan baris baru
+   di dalam innerHTML ikut kelihatan. Di area demo async dimatikan biar rapi. */
+.promise-outputs,
+.async-outputs {
+  white-space: normal;
+  margin-top: 0.5rem;
+}
+
+.promise-result,
+.async-result {
+  padding: 0.25rem 0;
+  border-bottom: 1px dashed #4b5563;
+}
+
+.promise-result:last-child,
+.async-result:last-child {
+  border-bottom: none;
+}
+
+/* ---------- UI untuk latihan async ---------- */
+
+.latihan-ui {
+  white-space: normal;
+  font-family: system-ui, sans-serif;
+  color: #1f2937;
+  background: #ffffff;
+  border-radius: 0.375rem;
+  padding: 0.75rem;
+}
+
+.latihan-ui button {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.latihan-ui button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.latihan-ui button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.latihan-ui input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.latihan-ui ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.latihan-ui__aksi {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.latihan-ui__error {
+  color: #b91c1c;
+}
+
+.latihan-ui__info {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.spinner {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 2px solid #d1d5db;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  vertical-align: -2px;
+  animation: putar 0.7s linear infinite;
+}
+
+@keyframes putar {
+  to { transform: rotate(360deg); }
+}
