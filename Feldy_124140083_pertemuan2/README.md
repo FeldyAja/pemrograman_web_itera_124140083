@@ -27,13 +27,23 @@ Daftar kota, satuan suhu, dan data cuaca terakhir disimpan di localStorage, jadi
 
 ## Screenshot
 
-Tampilan utama:
+Tampilan utama :
 
 ![Tampilan utama dashboard](screenshots/dashboard.png)
 
-Dialog edit kota:
+Pencarian kota :
 
 ![Dialog edit kota](screenshots/edit-kota.png)
+
+Pencarian dengan koordinat :
+
+![Dialog edit kota](screenshots/edit-kota.png)
+
+Dialog edit kota :
+
+![Dialog edit kota](screenshots/edit-kota.png)
+
+
 
 ## API yang dipakai
 
