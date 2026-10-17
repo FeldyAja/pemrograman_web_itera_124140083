@@ -29,19 +29,23 @@ Daftar kota, satuan suhu, dan data cuaca terakhir disimpan di localStorage, jadi
 
 Tampilan utama :
 
-![Tampilan utama dashboard](screenshots/dashboard.png)
+![Tampilan utama dashboard](screenshots/tampilan-utama.png)
 
 Pencarian kota :
 
-![Dialog edit kota](screenshots/edit-kota.png)
+![Tampilan pencarian rekomendasi](screenshots/pencarian.png)
 
 Pencarian dengan koordinat :
 
-![Dialog edit kota](screenshots/edit-kota.png)
+![Pencarian dengan koordinat](screenshots/koordinat.png)
+
+Tampilan card tertambah :
+
+![Tampilan kartu telah tertambah](screenshots/tambah-card.png)
 
 Dialog edit kota :
 
-![Dialog edit kota](screenshots/edit-kota.png)
+![Dialog edit kota](screenshots/edit.png)
 
 
 
