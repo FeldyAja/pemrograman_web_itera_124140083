@@ -1,0 +1,32 @@
+/* Pengaturan dasar: seluruh elemen memakai model kotak border-box */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f7f9;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+.App-header {
+  /* ===== LATIHAN MANDIRI: Eksplorasi HMR =====
+     Warna latar diubah dari #3498db menjadi #0d9488 untuk mengamati
+     pembaruan tampilan otomatis tanpa memuat ulang halaman. */
+  background-color: #0d9488;
+  color: white;
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+
+.App-header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
