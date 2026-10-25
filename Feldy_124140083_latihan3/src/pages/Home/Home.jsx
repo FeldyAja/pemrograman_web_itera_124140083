@@ -1,23 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Header from '../../components/Header/Header';
 import TaskForm from '../../components/TaskForm/TaskForm';
 import TaskItem from '../../components/TaskItem/TaskItem';
 import Card from '../../components/Card/Card';
+import useLocalStorage from '../../hooks/useLocalStorage';
+import useWindowSize from '../../hooks/useWindowSize';
 import './Home.css';
 
 function Home() {
-  // Data awal dibaca dari localStorage satu kali saat komponen pertama dimuat.
-  // Pembacaan dilakukan lewat nilai awal useState agar data tidak tertimpa
-  // oleh pemanggilan efek ganda pada StrictMode di mode pengembangan.
-  const [tasks, setTasks] = useState(() => {
-    const saved = localStorage.getItem('tasks_data');
-    return saved ? JSON.parse(saved) : [];
-  });
+  // Satu baris ini menggantikan seluruh kode baca/simpan localStorage sebelumnya
+  const [tasks, setTasks] = useLocalStorage('tasks_data', []);
 
-  // Setiap daftar tugas berubah, simpan kembali ke localStorage
-  useEffect(() => {
-    localStorage.setItem('tasks_data', JSON.stringify(tasks));
-  }, [tasks]);
+  // ===== LATIHAN MANDIRI: Terapkan useWindowSize =====
+  // Layar dengan lebar di bawah 768px dianggap sebagai mode mobile.
+  const { width } = useWindowSize();
+  const isMobile = width < 768;
 
   const handleAddTask = (newTask) => {
     setTasks([...tasks, newTask]);
@@ -34,7 +31,6 @@ function Home() {
   };
 
   // ===== LATIHAN MANDIRI: Tombol Hapus Semua Tugas =====
-  // Dialog konfirmasi ditampilkan terlebih dahulu agar tugas tidak terhapus tanpa sengaja.
   const handleClearAll = () => {
     if (window.confirm('Yakin ingin menghapus seluruh tugas?')) {
       setTasks([]);
@@ -48,10 +44,15 @@ function Home() {
     <div className="home">
       <Header
         title="React Task Manager"
-        description="Kelola tugas harian Anda secara terstruktur"
+        description="Kelola tugas dengan Custom Hook"
       />
 
       <main className="container">
+        {/* ===== LATIHAN MANDIRI: Badge mode layar berdasarkan useWindowSize ===== */}
+        <span className={`screen-badge ${isMobile ? 'mobile' : 'desktop'}`}>
+          {isMobile ? 'Mode Layar Mobile' : 'Mode Layar Desktop'}
+        </span>
+
         <div className="stats-row">
           <div className="stats">
             <p>Total: <strong>{tasks.length}</strong> tugas</p>
