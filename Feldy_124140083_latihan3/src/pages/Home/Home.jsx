@@ -3,48 +3,31 @@ import Header from '../../components/Header/Header';
 import TaskForm from '../../components/TaskForm/TaskForm';
 import TaskItem from '../../components/TaskItem/TaskItem';
 import Card from '../../components/Card/Card';
-import useLocalStorage from '../../hooks/useLocalStorage';
+import { useTasks } from '../../context/TaskContext';
 import useWindowSize from '../../hooks/useWindowSize';
 import './Home.css';
 
 function Home() {
-  // Satu baris ini menggantikan seluruh kode baca/simpan localStorage sebelumnya
-  const [tasks, setTasks] = useLocalStorage('tasks_data', []);
+  // Data dan fungsi diambil langsung dari context, tanpa menerima props dari App
+  const { tasks, addTask, deleteTask, toggleComplete, clearTasks, stats } = useTasks();
 
   // ===== LATIHAN MANDIRI: Terapkan useWindowSize =====
   // Layar dengan lebar di bawah 768px dianggap sebagai mode mobile.
   const { width } = useWindowSize();
   const isMobile = width < 768;
 
-  const handleAddTask = (newTask) => {
-    setTasks([...tasks, newTask]);
-  };
-
-  const handleDeleteTask = (taskId) => {
-    setTasks(tasks.filter((t) => t.id !== taskId));
-  };
-
-  const handleToggleComplete = (taskId) => {
-    setTasks(
-      tasks.map((t) => (t.id === taskId ? { ...t, completed: !t.completed } : t))
-    );
-  };
-
   // ===== LATIHAN MANDIRI: Tombol Hapus Semua Tugas =====
   const handleClearAll = () => {
     if (window.confirm('Yakin ingin menghapus seluruh tugas?')) {
-      setTasks([]);
+      clearTasks();
     }
   };
-
-  const completedCount = tasks.filter((t) => t.completed).length;
-  const remainingCount = tasks.length - completedCount;
 
   return (
     <div className="home">
       <Header
         title="React Task Manager"
-        description="Kelola tugas dengan Custom Hook"
+        description="State global dengan Context API"
       />
 
       <main className="container">
@@ -55,9 +38,9 @@ function Home() {
 
         <div className="stats-row">
           <div className="stats">
-            <p>Total: <strong>{tasks.length}</strong> tugas</p>
-            <p>Selesai: <strong style={{ color: '#10b981' }}>{completedCount}</strong></p>
-            <p>Belum Selesai: <strong style={{ color: '#ef4444' }}>{remainingCount}</strong></p>
+            <p>Total: <strong>{stats.total}</strong> tugas</p>
+            <p>Selesai: <strong style={{ color: '#10b981' }}>{stats.completed}</strong></p>
+            <p>Progress: <strong>{stats.completionRate.toFixed(0)}%</strong></p>
           </div>
 
           {/* ===== LATIHAN MANDIRI: Tombol Hapus Semua Tugas ===== */}
@@ -73,7 +56,7 @@ function Home() {
 
         {/* ===== LATIHAN MANDIRI: TaskForm dibungkus komponen Card ===== */}
         <Card>
-          <TaskForm onAddTask={handleAddTask} />
+          <TaskForm onAddTask={addTask} />
         </Card>
 
         <div className="task-list">
@@ -84,8 +67,8 @@ function Home() {
               <TaskItem
                 key={task.id}
                 task={task}
-                onDelete={handleDeleteTask}
-                onToggleComplete={handleToggleComplete}
+                onDelete={deleteTask}
+                onToggleComplete={toggleComplete}
               />
             ))
           )}
