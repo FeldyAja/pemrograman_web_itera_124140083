@@ -20,7 +20,7 @@ Feldy_124140083_pertemuan4/
 
 ## Penjelasan program
 
-### 1. `tugas1_bmi.py` - Hitung BMI
+### 1. tugas1_bmi.py - Hitung BMI
 
 Program meminta berat badan (kg) dan tinggi badan (m) lewat `input()`, lalu BMI dihitung dengan rumus `berat / (tinggi * tinggi)`. Hasilnya dicocokkan ke kategori memakai `if-elif-else`:
 
@@ -33,7 +33,7 @@ Program meminta berat badan (kg) dan tinggi badan (m) lewat `input()`, lalu BMI 
 
 Nilai BMI ditampilkan dengan 2 angka di belakang koma, lalu diikuti kategorinya. Tinggi badan harus diisi dalam satuan meter (misalnya `1.7`), bukan cm, dan inputnya harus berupa angka.
 
-### 2. `tugas2_nilai_mahasiswa.py` - Pengelola Nilai Mahasiswa
+### 2. tugas2_nilai_mahasiswa.py - Pengelola Nilai Mahasiswa
 
 Datanya berupa list yang isinya 6 dictionary mahasiswa, masing-masing punya kunci `nama`, `nim`, `nilai_uts`, `nilai_uas`, dan `nilai_tugas`. Flow :
 
@@ -44,7 +44,7 @@ Datanya berupa list yang isinya 6 dictionary mahasiswa, masing-masing punya kunc
 
 Data contohnya dibuat mencakup semua grade dari A sampai E supaya semua cabang penilaian teruji.
 
-### 3. `math_operations.py` dan `main.py` - Modul Matematika
+### 3. math_operations.py dan main.py - Modul Matematika
 
 `math_operations.py` adalah modulnya. Isinya:
 
