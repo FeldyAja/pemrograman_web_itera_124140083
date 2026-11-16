@@ -1,0 +1,12 @@
+# Cache Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.venv/
+
+# File editor dan sistem
+.vscode/
+.idea/
+.DS_Store
