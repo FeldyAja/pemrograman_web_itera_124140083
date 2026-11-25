@@ -1,0 +1,21 @@
+# Virtual environment
+venv/
+.venv/
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Database SQLite lokal (jika ada)
+*.sqlite
+*.sqlite3
+
+# Hasil build dan testing
+*.egg-info/
+.pytest_cache/
+.coverage
+
+# File editor dan sistem
+.vscode/
+.idea/
+.DS_Store
