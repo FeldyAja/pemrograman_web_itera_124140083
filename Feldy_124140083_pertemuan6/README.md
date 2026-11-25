@@ -197,6 +197,22 @@ Pengujian endpoint Mahasiswa memakai pola yang sama dengan alamat `/api/mahasisw
 
 Tangkapan layar berikut menunjukkan hasil pengujian seluruh endpoint, termasuk contoh respons 400 dan 404.
 
+**Mahasiswa — GET semua (200)**
+
+![Pengujian GET semua Mahasiswa berhasil](screenshots/pengujian_mahasiswa_read_all_200.png)
+
+**Mahasiswa — GET berdasarkan ID (200)**
+
+![Pengujian GET satu Mahasiswa berhasil](screenshots/pengujian_mahasiswa_read_one_200.png)
+
+**Mahasiswa — CREATE (200)**
+
+![Pengujian CREATE Mahasiswa berhasil](screenshots/pengujian_mahasiswa_create_200.png)
+
+**Mahasiswa — UPDATE (200)**
+
+![Pengujian UPDATE Mahasiswa berhasil](screenshots/pengujian_mahasiswa_update_200.png)
+
 **Pengujian endpoint Mahasiswa — respons 400**
 
 ![Pengujian endpoint Mahasiswa dengan respons 400](screenshots/pengujian_mahasiswa_400.png)
@@ -208,6 +224,14 @@ Tangkapan layar berikut menunjukkan hasil pengujian seluruh endpoint, termasuk c
 **Pengujian endpoint Matakuliah — respons 400**
 
 ![Pengujian endpoint Matakuliah dengan respons 400](screenshots/pengujian_matakuliah_400.png)
+
+**Matakuliah — GET semua (200)**
+
+![Pengujian GET semua Matakuliah berhasil](screenshots/pengujian_matakuliah_read_all_200.png)
+
+**Matakuliah — GET berdasarkan ID (200)**
+
+![Pengujian GET satu Matakuliah berhasil](screenshots/pengujian_matakuliah_read_one_200.png)
 
 **Pengujian endpoint Matakuliah — CREATE berhasil (200)**
 
