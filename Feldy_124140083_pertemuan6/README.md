@@ -209,6 +209,14 @@ Tangkapan layar berikut menunjukkan hasil pengujian seluruh endpoint, termasuk c
 
 ![Pengujian endpoint Matakuliah dengan respons 400](screenshots/pengujian_matakuliah_400.png)
 
+**Pengujian endpoint Matakuliah — CREATE berhasil (200)**
+
+![Pengujian CREATE Matakuliah berhasil dengan respons 200](screenshots/pengujian_matakuliah_create_200.png)
+
+**Pengujian endpoint Matakuliah — DELETE berhasil (200)**
+
+![Pengujian DELETE Matakuliah berhasil dengan respons 200](screenshots/pengujian_matakuliah_delete_200.png)
+
 **Pengujian endpoint Matakuliah — respons 404**
 
 ![Pengujian endpoint Matakuliah dengan respons 404](screenshots/pengujian_matakuliah_404.png)
